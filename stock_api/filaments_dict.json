@@ -1,0 +1,717 @@
+{
+    "PLA Glow": {
+        "price": "27.99",
+        "colours": [
+            [
+                "Glow Green",
+                "Out of stock"
+            ],
+            [
+                "Glow Pink",
+                "In stock"
+            ],
+            [
+                "Glow Blue",
+                "Out of stock"
+            ],
+            [
+                "Glow Orange",
+                "In stock"
+            ],
+            [
+                "Glow Yellow",
+                "Out of stock"
+            ]
+        ]
+    },
+    "PLA Metal": {
+        "price": "27.99",
+        "colours": [
+            [
+                "Oxide Green Metallic",
+                "In stock"
+            ],
+            [
+                "Cobalt Blue Metallic",
+                "In stock"
+            ],
+            [
+                "Iridium Gold Metallic",
+                "In stock"
+            ],
+            [
+                "Iron Gray Metallic",
+                "In stock"
+            ],
+            [
+                "Copper Brown Metallic",
+                "In stock"
+            ]
+        ]
+    },
+    "PLA CMYK Lithophane Bundle": {
+        "price": "73.59",
+        "colours": []
+    },
+    "PLA Basic": {
+        "price": "22.99",
+        "colours": [
+            [
+                "Jade White",
+                "In stock"
+            ],
+            [
+                "Beige",
+                "In stock"
+            ],
+            [
+                "Gold",
+                "Out of stock"
+            ],
+            [
+                "Gray",
+                "In stock"
+            ],
+            [
+                "Silver",
+                "In stock"
+            ],
+            [
+                "Bronze",
+                "In stock"
+            ],
+            [
+                "Brown",
+                "Out of stock"
+            ],
+            [
+                "Red",
+                "Out of stock"
+            ],
+            [
+                "Magenta",
+                "In stock"
+            ],
+            [
+                "Pink",
+                "In stock"
+            ],
+            [
+                "Orange",
+                "In stock"
+            ],
+            [
+                "Yellow",
+                "In stock"
+            ],
+            [
+                "Bambu Green",
+                "In stock"
+            ],
+            [
+                "Green",
+                "In stock"
+            ],
+            [
+                "Cyan",
+                "Out of stock"
+            ],
+            [
+                "Blue",
+                "In stock"
+            ],
+            [
+                "Purple",
+                "In stock"
+            ],
+            [
+                "Blue Grey",
+                "Out of stock"
+            ],
+            [
+                "Black",
+                "In stock"
+            ],
+            [
+                "Mistletoe Green",
+                "Out of stock"
+            ]
+        ]
+    },
+    "PLA Matte": {
+        "price": "22.99",
+        "colours": [
+            [
+                "Matte Desert Tan",
+                "In stock"
+            ],
+            [
+                "Matte Ivory White",
+                "In stock"
+            ],
+            [
+                "Matte Latte Brown",
+                "In stock"
+            ],
+            [
+                "Matte Ash Grey",
+                "Out of stock"
+            ],
+            [
+                "Matte Lilac purple",
+                "Out of stock"
+            ],
+            [
+                "Matte Sakura Pink",
+                "In stock"
+            ],
+            [
+                "Matte Mandarin Orange",
+                "In stock"
+            ],
+            [
+                "Matte Lemon Yellow",
+                "In stock"
+            ],
+            [
+                "Matte Scarlet Red",
+                "Out of stock"
+            ],
+            [
+                "Matte Dark Red",
+                "In stock"
+            ],
+            [
+                "Matte Dark Brown",
+                "In stock"
+            ],
+            [
+                "Matte Dark Green",
+                "In stock"
+            ],
+            [
+                "Matte Grass Green",
+                "In stock"
+            ],
+            [
+                "Matte Ice Blue",
+                "In stock"
+            ],
+            [
+                "Matte Marine Blue",
+                "In stock"
+            ],
+            [
+                "Matte Dark Blue",
+                "In stock"
+            ],
+            [
+                "Matte Charcoal",
+                "In stock"
+            ]
+        ]
+    },
+    "PETG Basic": {
+        "price": "22.99",
+        "colours": [
+            [
+                "Transparent",
+                "Out of stock"
+            ],
+            [
+                "Yellow",
+                "In stock"
+            ],
+            [
+                "White",
+                "In stock"
+            ],
+            [
+                "Orange",
+                "In stock"
+            ],
+            [
+                "Gold",
+                "In stock"
+            ],
+            [
+                "Black",
+                "In stock"
+            ],
+            [
+                "Red",
+                "In stock"
+            ],
+            [
+                "Lake Blue",
+                "Out of stock"
+            ],
+            [
+                "Gray",
+                "In stock"
+            ],
+            [
+                "Blue",
+                "In stock"
+            ],
+            [
+                "Blue Gray",
+                "In stock"
+            ],
+            [
+                "Green",
+                "In stock"
+            ],
+            [
+                "Lime Green",
+                "In stock"
+            ],
+            [
+                "Purple",
+                "In stock"
+            ],
+            [
+                "Nature",
+                "In stock"
+            ]
+        ]
+    },
+    "ABS": {
+        "price": "22.99",
+        "colours": [
+            [
+                "ABS Beige",
+                "In stock"
+            ],
+            [
+                "ABS Azure",
+                "In stock"
+            ],
+            [
+                "ABS Olive",
+                "In stock"
+            ],
+            [
+                "ABS Tangerine Yellow",
+                "In stock"
+            ],
+            [
+                "ABS Lavender",
+                "In stock"
+            ],
+            [
+                "ABS Navy Blue",
+                "In stock"
+            ],
+            [
+                "ABS Silver",
+                "In stock"
+            ],
+            [
+                "ABS Orange",
+                "In stock"
+            ],
+            [
+                "ABS Mint",
+                "In stock"
+            ],
+            [
+                "ABS Purple",
+                "In stock"
+            ],
+            [
+                "ABS Bambu Green",
+                "In stock"
+            ],
+            [
+                "ABS Blue",
+                "In stock"
+            ],
+            [
+                "ABS Red",
+                "In stock"
+            ],
+            [
+                "ABS Yellow",
+                "In stock"
+            ],
+            [
+                "ABS Black",
+                "Out of stock"
+            ],
+            [
+                "ABS White",
+                "Out of stock"
+            ]
+        ]
+    },
+    "TPU 95A": {
+        "price": "31.19",
+        "colours": [
+            [
+                "White",
+                "In stock"
+            ],
+            [
+                "Black",
+                "Out of stock"
+            ]
+        ]
+    },
+    "PLA Tough": {
+        "price": "26.99",
+        "colours": [
+            [
+                "Pine Green",
+                "In stock"
+            ],
+            [
+                "Lavender Blue",
+                "In stock"
+            ],
+            [
+                "Gray",
+                "In stock"
+            ],
+            [
+                "Silver",
+                "In stock"
+            ],
+            [
+                "Black",
+                "Out of stock"
+            ],
+            [
+                "Vermilion Red",
+                "In stock"
+            ],
+            [
+                "Orange",
+                "In stock"
+            ],
+            [
+                "Light Blue",
+                "In stock"
+            ],
+            [
+                "Yellow",
+                "In stock"
+            ],
+            [
+                "White",
+                "In stock"
+            ]
+        ]
+    },
+    "PLA Silk": {
+        "price": "27.99",
+        "colours": [
+            [
+                "Pink ",
+                "In stock"
+            ],
+            [
+                "White",
+                "In stock"
+            ],
+            [
+                "Green",
+                "In stock"
+            ],
+            [
+                "Purple",
+                "In stock"
+            ],
+            [
+                "Gold",
+                "In stock"
+            ],
+            [
+                "Silver",
+                "In stock"
+            ],
+            [
+                "Copper",
+                "In stock"
+            ],
+            [
+                "Blue",
+                "In stock"
+            ]
+        ]
+    },
+    "PLA Sparkle": {
+        "price": "27.99",
+        "colours": [
+            [
+                "Slate Gray Sparkle",
+                "In stock"
+            ],
+            [
+                "Royal Purple Sparkle",
+                "In stock"
+            ],
+            [
+                "Alpine Green Sparkle",
+                "Out of stock"
+            ],
+            [
+                "Crimson Red Sparkle",
+                "In stock"
+            ],
+            [
+                "Onyx Black Sparkle",
+                "In stock"
+            ],
+            [
+                "Classic Gold Sparkle",
+                "Out of stock"
+            ]
+        ]
+    },
+    "PLA Marble": {
+        "price": "27.99",
+        "colours": [
+            [
+                "Red Granite",
+                "In stock"
+            ],
+            [
+                "White Marble",
+                "Out of stock"
+            ]
+        ]
+    },
+    "PLA Basic Gradient": {
+        "price": "27.99",
+        "colours": [
+            [
+                "Ocean to Meadow",
+                "Out of stock"
+            ],
+            [
+                "Solar Breeze",
+                "In stock"
+            ],
+            [
+                "Arctic Whisper",
+                "In stock"
+            ]
+        ]
+    },
+    "PLA-CF": {
+        "price": "32.99",
+        "colours": [
+            [
+                "Burgundy Red",
+                "In stock"
+            ],
+            [
+                "Jeans Blue",
+                "In stock"
+            ],
+            [
+                "Lava Gray",
+                "In stock"
+            ],
+            [
+                "Black",
+                "In stock"
+            ],
+            [
+                "Matcha Green",
+                "In stock"
+            ],
+            [
+                "Royal Blue",
+                "In stock"
+            ],
+            [
+                "Iris Purple",
+                "Out of stock"
+            ]
+        ]
+    },
+    "PETG-CF": {
+        "price": "32.99",
+        "colours": [
+            [
+                "Titan Gray ",
+                "In stock"
+            ],
+            [
+                "Violet Purple",
+                "In stock"
+            ],
+            [
+                "Brick Red",
+                "In stock"
+            ],
+            [
+                "Indigo Blue",
+                "In stock"
+            ],
+            [
+                "Malachite Green",
+                "In stock"
+            ],
+            [
+                "Black",
+                "In stock"
+            ]
+        ]
+    },
+    "PAHT-CF": {
+        "price": "45.99",
+        "colours": [
+            [
+                "Black",
+                "In stock"
+            ]
+        ]
+    },
+    "Support for PLA": {
+        "price": "32.99",
+        "colours": [
+            [
+                "White",
+                "In stock"
+            ],
+            [
+                "Black",
+                "In stock"
+            ]
+        ]
+    },
+    "Support for PA/PET": {
+        "price": "36.99",
+        "colours": [
+            [
+                "Green",
+                "In stock"
+            ]
+        ]
+    },
+    "ASA": {
+        "price": "27.99",
+        "colours": [
+            [
+                "White",
+                "In stock"
+            ],
+            [
+                "Black",
+                "Out of stock"
+            ],
+            [
+                "Green",
+                "In stock"
+            ],
+            [
+                "Red",
+                "In stock"
+            ],
+            [
+                "Blue",
+                "In stock"
+            ],
+            [
+                "Gray",
+                "In stock"
+            ]
+        ]
+    },
+    "TPU 95A HF": {
+        "price": "38.99",
+        "colours": [
+            [
+                "Black",
+                "Out of stock"
+            ],
+            [
+                "White",
+                "In stock"
+            ],
+            [
+                "Gray",
+                "Out of stock"
+            ],
+            [
+                "Yellow",
+                "In stock"
+            ],
+            [
+                "Blue",
+                "Out of stock"
+            ],
+            [
+                "Red",
+                "Out of stock"
+            ]
+        ]
+    },
+    "PA6-CF": {
+        "price": "37.99",
+        "colours": [
+            [
+                "Black",
+                "In stock"
+            ]
+        ]
+    },
+    "PET-CF": {
+        "price": "41.99",
+        "colours": [
+            [
+                "Black",
+                "In stock"
+            ]
+        ]
+    },
+    "PLA Aero": {
+        "price": "40.99",
+        "colours": [
+            [
+                "White",
+                "In stock"
+            ],
+            [
+                "Black",
+                "In stock"
+            ]
+        ]
+    },
+    "PC": {
+        "price": "36.99",
+        "colours": [
+            [
+                "Clear Black",
+                "In stock"
+            ],
+            [
+                "Transparent",
+                "In stock"
+            ],
+            [
+                "Black",
+                "In stock"
+            ],
+            [
+                "White",
+                "In stock"
+            ]
+        ]
+    },
+    "Bambu Filament Swatches": {
+        "price": "9.99",
+        "colours": []
+    },
+    "Bambu Reusable Spool": {
+        "price": "11.99",
+        "colours": []
+    },
+    "Bambu CMYK LED Backlight Board": {
+        "price": "9.99",
+        "colours": []
+    }
+}
