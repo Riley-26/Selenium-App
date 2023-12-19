@@ -47,48 +47,86 @@ def index():
     return jsonify({"filaments": output})
 
 
-@app.route("/filament/<id>", methods=["GET"])
-def get_filament_by_id(id):
-    filament_by_id = Filament.query.get_or_404(id)
+@app.route("/filament", methods=["GET"])
+def get_filament_by_query():
+    query = request.query_string.decode()
+    param_pair = {}
+    valid_filaments = Filament.query.all()
+    params = []
     output = []
+    data = {"filament": {}}
     
-    filament_data = {"id": filament_by_id.id, "name": filament_by_id.name, "price": filament_by_id.price}
-    colours_data = []
-    for colour in filament_by_id.colours:
-        colours_data.append({"colour_id": colour.colour_id, "name": colour.name, "instock": colour.instock})
-    filament_data["colours"] = colours_data
-    output.append(filament_data)
-    
-    return jsonify({filament_by_id.name: filament_data})
-    
-
-
-#Create tables
-# with app.app_context():
-#     db.create_all()
-    
-#     for key, value in filaments_file.items():
-#         name = key
-#         price = filaments_file[key]["price"]
-        
-#         new_filament = Filament(name=name, price=price)
-#         db.session.add(new_filament)
-#         db.session.commit()
-        
-#         for i in value["colours"]:
-#             name = i[0]
-#             if i[1] == "In stock":
-#                 instock = True
-#             elif i[1] == "Out of stock":
-#                 instock = False
-#             filament = new_filament
+    if "=" not in query:
+        for filament in valid_filaments:
+            single_colours_data = []
+            for colour in filament.colours:
+                single_colours_data.append({"colour_id": colour.colour_id, "name": colour.name, "instock": colour.instock})
+            single_param_data = {}
+            single_param_data = {"id": filament.id, "name": filament.name, "price": filament.price, "colours": single_colours_data}
+                
+            output.append({query: single_param_data[query]})
             
-#             new_filament_colour = Colour(name=name, instock=instock, filament=filament)
+    
+    if "&" in query:
+        for item in query.split("&"):
+            if "=" in item:
+                item = item.split("=")
+                params.append(item)
+    else:
+        if "=" in query:
+            new_query = query.split("=")
+            params.append(new_query)
 
-#             db.session.add(new_filament_colour)
-#             db.session.commit()
         
+    for filament in valid_filaments:
+        colours_data = []
+        filament_data = {}
+        filament_data = {"id": filament.id, "name": filament.name, "price": filament.price}
+        
+        for colour in filament.colours:
+            colours_data.append({"colour_id": colour.colour_id, "name": colour.name, "instock": colour.instock})
+            
+        filament_data["colours"] = colours_data
+        
+        data["filament"][filament.name] = filament_data
+        
+    for key, value in params:
+        if "%20" in value:
+            value = value.replace("%20", " ")
+        
+        for item in data["filament"].keys():
+            if str(data["filament"][item][key]) == str(value) and str(data["filament"][item][key]) not in output:
+                output.append(data["filament"][item])
+    
+    return jsonify(output)
 
+
+#Create tables when database needs updating
+'''
+with app.app_context():
+    db.create_all()
+    
+    for key, value in filaments_file.items():
+        name = key
+        price = filaments_file[key]["price"]
+        
+        new_filament = Filament(name=name, price=price)
+        db.session.add(new_filament)
+        db.session.commit()
+        
+        for i in value["colours"]:
+            name = i[0]
+            if i[1] == "In stock":
+                instock = True
+            elif i[1] == "Out of stock":
+                instock = False
+            filament = new_filament
+            
+            new_filament_colour = Colour(name=name, instock=instock, filament=filament)
+
+            db.session.add(new_filament_colour)
+            db.session.commit()
+'''
 
 
 if __name__ == "__main__":

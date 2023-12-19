@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
@@ -68,10 +69,11 @@ def runBot():
         )
 
         all_products = driver.find_elements(By.CLASS_NAME, "Grid__Cell")
+        
         for i in range(len(all_products)):
             each_filament = {}
             
-            WebDriverWait(driver, 5).until(
+            WebDriverWait(all_products[i], 5).until(
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.ProductItem__Info"))
             )
             
@@ -82,17 +84,22 @@ def runBot():
             filament_price = current_filament.find_elements(By.CSS_SELECTOR, "div.ProductItem__PriceList.Heading > span")[0].get_attribute("innerHTML")
             filament_price = filament_price.split("£")[1].split(" ")[0]
             
-            WebDriverWait(driver, 5).until(
-                EC.presence_of_all_elements_located((By.CSS_SELECTOR, "variant-swatch-king > div.swatches > div"))
-            )
-            
             try:
+                WebDriverWait(current_filament, 5).until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, "variant-swatch-king > div.swatches > div"))
+                )
+                
                 filament_colours_path = current_filament.find_elements(By.CSS_SELECTOR, "variant-swatch-king > div.swatches > div")
                 filament_option = None
                 for i in filament_colours_path:
                     if i.get_attribute("option-name") == "Color":
                         filament_option = i
+                        break
             
+                WebDriverWait(filament_option, 5).until(
+                    EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.swatch-single > fieldset > ul.swatch-view > li"))
+                )
+                
                 filament_colours = filament_option.find_elements(By.CSS_SELECTOR, "div.swatch-single > fieldset > ul.swatch-view > li")
                 filament_colours_list = []
                 
@@ -108,7 +115,7 @@ def runBot():
                 each_filament["colours"] = filament_colours_list
                 filaments[filament_name] = each_filament
                 
-            except (IndexError, AttributeError):
+            except (IndexError, AttributeError, TimeoutException):
                 each_filament["price"] = filament_price
                 each_filament["colours"] = []
                 filaments[filament_name] = each_filament
@@ -139,17 +146,46 @@ def compareData(prev_json, new_json, filaments_dict):
     new_data = []
     
     #This will write to the new json file, if there are new items, and the previous json file will become the old "new" json file.
-    with open(prev_json, "w") as file:
-        
-        
-        if True:
-            json.dump(new_json, file, indent=4)
-        
-            with open(new_json, "w") as file:
-                json.dump(filaments_dict, file, indent=4)
+    with open(prev_json, "r") as file:
+        prev_filaments_file = json.load(file)
     
-    return new_data
+    filament_names = list(filaments_dict.keys())
+    prev_filament_names = list(prev_filaments_file.keys())
     
+    #If this has items in it, items have been removed from the store
+    extra_old_data = [x for x in prev_filament_names if x not in filament_names]
+    #If this has items in it, items have been added to the store
+    extra_new_data = [x for x in filament_names if x not in prev_filament_names]
+    
+    if len(extra_old_data) > 0:
+        new_data.append("Removed items: " + str(extra_old_data))
+        print("Items have been removed from store.")
+        print(new_data)
+    
+    if len(extra_new_data) > 0:
+        new_data.append("Added items: " + str(extra_new_data))
+        print("New items added to store.")
+        print(new_data)
+    
+    if len(new_data) > 0:
+        with open(new_json, "r") as new_file:
+            new_content = json.load(new_file)
+        
+        with open(prev_json, "w") as prev_file:
+            json.dump(new_content, prev_file, indent=4)
+            
+        with open(new_json, "w") as new_file:
+            json.dump(filaments_dict, new_file, indent=4)
+    else:
+        new_data.append("N/A")
+        print(new_data)
+    
+    return ""
+    
+    # "Hello": {
+    #     "price": "working",
+    #     "colours": []
+
 
 #Run bot to search through website
 runBot()
